@@ -1,1 +1,1 @@
-![Pew Banner](docs/images/banner.png)
+![Pew Banner](docs/images/pew_banner.png)
