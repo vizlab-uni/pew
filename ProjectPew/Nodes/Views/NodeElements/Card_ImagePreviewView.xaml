@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ProjectHeracles.Nodes.Views.NodeElements.Card_ImagePreviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ProjectHeracles.Nodes.Views.NodeElements"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+
+    <Grid>
+        <materialDesign:Card x:Name="previewCard" Background="{DynamicResource PrimaryHueLightBrush}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="cardTitleBar" Grid.Row="0" Orientation="Horizontal" Background="{DynamicResource AccentColorBrush3}">
+                    <TextBlock HorizontalAlignment="Center" Margin="4,4,16,4" FontWeight="Bold">Preview</TextBlock>
+                    <Button x:Name="openPreviewButton" Width="24" Height="24" Margin="4,4,4,4" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="Open Preview"
+                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                        <Button.CommandParameter>
+                            <StackPanel>
+                                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Margin="8,8,8,8"><Run Text="Preview"/></TextBlock>
+                                <Image x:Name="imgHighResolutionPreview" Width="800" Height="600" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="8,8,8,8" />
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button x:Name="btnSavePreview" Margin="8,8,8,8" Style="{StaticResource MaterialDesignRaisedButton}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" ToolTip="Save This Result" Content="SAVE" Click="BtnSavePreview_Click" />
+                                    <Button x:Name="btnClose" Margin="8,8,8,8" Style="{StaticResource MaterialDesignRaisedButton}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" ToolTip="Close Preview" Content="Close"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button.CommandParameter>
+                        <materialDesign:PackIcon Kind="AspectRatio" Height="16" Width="16" />
+                    </Button>
+                </StackPanel>
+                <Image Grid.Row="2" x:Name="imgPreview" Height="64" Width="64"/>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+
+</UserControl>

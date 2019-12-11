@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectHeracles"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ProjectHeracles.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800"
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+		xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Grid x:Name="grid">
+        <Button x:Name="btnLucas" Content="LUCAS" HorizontalAlignment="Left" Margin="82,117,0,0" VerticalAlignment="Top" Width="234" Click="btnLucas_Click" Height="89"/>
+        <Button x:Name="btnPedro" Content="PEDRO" HorizontalAlignment="Left" Margin="418,117,0,0" VerticalAlignment="Top" Width="234" Click="btnPedro_Click" Height="89"/>
+        <Button x:Name="btnTestPython" Content="Test Python" HorizontalAlignment="Left" Margin="119,284,0,0" VerticalAlignment="Top" Width="178" Height="74" Click="BtnTestPython_Click"/>
+        <Button x:Name="btnTestNodeNetwork" Content="Node Net" HorizontalAlignment="Left" Margin="418,284,0,0" VerticalAlignment="Top" Width="178" Height="74" Click="BtnTestNodeNetwork_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProjectHeracles.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PythonPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:/Python/python.exe</Value>
+    </Setting>
+    <Setting Name="PythonScriptsFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PythonScripts/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

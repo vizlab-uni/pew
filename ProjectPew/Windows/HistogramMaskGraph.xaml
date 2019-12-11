@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProjectHeracles.Windows.HistogramMaskGraph"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectHeracles.Windows"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="Histogram Mask Graph" Height="600" Width="1280">
+	<Grid Margin="0,0,2,0">
+		<Label x:Name="lblSourceImage" Content="Source Image" HorizontalAlignment="Left" Margin="48,22,0,0" VerticalAlignment="Top"/>
+		<Image x:Name="imgSource" HorizontalAlignment="Left" Height="200" Margin="48,48,0,0" VerticalAlignment="Top" Width="250"/>
+		<Label x:Name="lblPreviewImage" Content="Preview Image" HorizontalAlignment="Left" Margin="303,22,0,0" VerticalAlignment="Top"/>
+		<Image x:Name="imgPreview" HorizontalAlignment="Left" Height="200" Margin="303,48,0,0" VerticalAlignment="Top" Width="250"/>
+		<lvc:CartesianChart Series="{Binding HistogramCollection}" LegendLocation="Right" Margin="135,253,10,10" DataClick="HistogramChart_Click" >
+			<lvc:CartesianChart.AxisY>
+				<lvc:Axis Title="Value" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
+			</lvc:CartesianChart.AxisY>
+			<lvc:CartesianChart.AxisX>
+				<lvc:Axis Title="Color" Labels="{Binding Labels}"></lvc:Axis>
+			</lvc:CartesianChart.AxisX>
+		</lvc:CartesianChart>
+		<Button x:Name="btnLoadImage" Content="Load Image" HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Width="120" Click="BtnLoadImage_Click"/>
+	</Grid>
+</Window>
