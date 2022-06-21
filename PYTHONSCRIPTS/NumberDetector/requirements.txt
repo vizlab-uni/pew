@@ -1,6 +1,6 @@
 matplotlib==3.0.3
 Keras==2.2.4
 opencv_python==4.1.0.25
-numpy==1.16.3
+numpy==1.22.0
 scikit_learn==0.20.3
 tensorflow==1.13.1
